@@ -1,0 +1,13 @@
+/*body {
+    color: gray;
+    background-color: black;
+}
+*/
+.fancybox {
+  text-align: center;
+  border: 5px solid green;
+  margin: 1em;
+  padding: 0.5em;
+  width: 400px;
+  height: 150px;
+}
