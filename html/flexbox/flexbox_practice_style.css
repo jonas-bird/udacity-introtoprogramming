@@ -1,0 +1,19 @@
+.outer {
+  display: flex;
+  flex-wrap: wrap;
+  border: 7px solid black;
+  width: 200px;
+}
+
+.red {
+  background-color: red;
+}
+
+.black {
+  background-color: black;
+}
+
+.box {
+ width: 100px;
+ height: 100px;
+}

@@ -13,7 +13,7 @@
         <p>Many of the terms used in computer science have evolved organically and are used in ways that are not as precise as the language we use with computers <strong>needs</strong> to be</p>
         <p>In order to facilitate writing equations and other scientific works html inclused a way to write<sup>super</sup> as well as<sub>sub</sub> scripts</p>
         <p>Some other tags in this course include a tag to <mark>highlight</mark> as <br /> well as <br /> the tag to insert linebreaks</p>
-        <p>A lot of this material is review for me, but I enjoyt the chance to get some practice. This is an example of an image<img src="https://placebear.com/800/600" alt="Cute bears"></p>
+        <p>A lot of this material is review for me, but I enjoyed the chance to get some practice. This is an example of an image<img src="https://placebear.com/800/600" alt="Cute bears"></p>
         <p>HTML document structure. While it isconsidered valid to not include a head and/or body tag, when the browser creates the DOM it will create them based on its best guess as to where it belongs in the code it recieved. It is an error to place tags that imply that the body of the document has begun before elements such as the title tag that are required to be part of the head of the document</p>
         <h3>Programming languages I am planning to learn</h3>
         <ol>
@@ -75,5 +75,49 @@
           <p>when an element is styled through the <em>style</em> attribute it is an inline style.</p>
           <p>In css a px is 1/96th of an inch</p>
           <div class="fancybox">I have less experience with CSS than I do with HTML. I will need to practice with it before I feel confident.</div>
+          <h4>Fonts</h4>
+          <p>Rather than have each font related property/value pair seperated, they can be combined with a shorthand expression.</p>
+          <code>font: italic 24px Times;</code>
+          <p>is the same as</p>
+          <pre><code>
+                     font-style: italic;
+                     font-size: 24px;
+                     font-family: Times;</code></pre>
+            <p>The declarations need to be in the order <code>font: font-style font-variant font-weight font-size font-family; </code> Both font-size and font-family are required, the other properties are optional and have default values</p>
+            <p>For more info <a href="https://css-tricks.com/snippets/css/font-shorthand/">Css-tricks</a></p>
+            <br />
+            <p>It is possible to instruct a browser to download a specific font from a repository such as <a href="https://developers.google.com/fonts/docs/getting_started">Google fonts</a> This has made the concept of 'web safe' fonts less of a concearn and opened up a wider range of design possibilities. Using an online source for non-standard fonts does not remove the need for a font stack with generic options as some users will have their browsers configured (to conserve bandwidth, as part of a styling plugin, or for privacy reasons) configured to not download 3'rd party assets like fonts</p>
+            <p>To make use of Googl's fonts use the following snippet. Change the name of the font in the URL parameter as well as in the CSS.
+            <pre><code>
+            &lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine"&gt;
+    &lt;style&gt;
+      body {
+        font-family: 'Tangerine', serif;
+        font-size: 48px;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;Making the Web Beautiful!&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<br />
+<h4>Using div elements as containers</h4>
+<p>In order to group elements together, and to apply changes in positioning to the assembladge of elements, rather than make changes to the individual elements, we can make use of placing a div around other block level elements, including other div elements. An example of where this can have very different results is when applying a positioning property like <code>float:right;</code> to a containing element instead of to the individual elements inside...</p>
+<br />
+<h5>Float applied to individual elements</h5>
+<div style="float:right;background-color:red;width:100px;height:100px"></div>
+<div style="float:right;background-color:green;width:100px;height:100px"></div>
+<br /><br /><br />
+<h5>To a containing element</h5>
+<div style="float:right;"><div style="background-color:red;width:100px;height:100px"></div>
+<div style="background-color:green;width:100px;height:100px"></div>
+</div>
+<p>HTML was originally designed to handle the layout for basic text documents. As the types of information represented, and the design and layout for the content have become more complex, CSS has adapted to allow for more fine-tuned placement of elements, and more complex displays. One of the common tools in current use is the flexible box or 'flexbox' model. Using a flexbox layout changes the way that the elements behave in response to differing amounts of screen real-estate with the flex-wrap property</p>
+<p>Setting <code>flex-wrap: wrap;</code> in the containing block level element causes the inner elements to move to a new-line rather than compress</p>
     </body>
 </html>
